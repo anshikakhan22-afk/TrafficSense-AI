@@ -1,0 +1,94 @@
+{
+  "accuracy": 0.8981878544750311,
+  "validation_accuracy": 0.8912562257885999,
+  "classification_report": {
+    "Low Congestion": {
+      "precision": 0.9619805481874447,
+      "recall": 0.912751677852349,
+      "f1-score": 0.936719758932415,
+      "support": 2384.0
+    },
+    "Moderate Congestion": {
+      "precision": 0.8638166593212869,
+      "recall": 0.8343976160068114,
+      "f1-score": 0.8488523170203551,
+      "support": 2349.0
+    },
+    "High Congestion": {
+      "precision": 0.8736100815418829,
+      "recall": 0.9443108974358975,
+      "f1-score": 0.9075856757797459,
+      "support": 2496.0
+    },
+    "accuracy": 0.8981878544750311,
+    "macro avg": {
+      "precision": 0.8998024296835382,
+      "recall": 0.8971533970983526,
+      "f1-score": 0.8977192505775053,
+      "support": 7229.0
+    },
+    "weighted avg": {
+      "precision": 0.8995708567095188,
+      "recall": 0.8981878544750311,
+      "f1-score": 0.8981087072516166,
+      "support": 7229.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      2176,
+      170,
+      38
+    ],
+    [
+      86,
+      1960,
+      303
+    ],
+    [
+      0,
+      139,
+      2357
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "Low Congestion",
+    "Moderate Congestion",
+    "High Congestion"
+  ],
+  "dataset_source": "UCI Machine Learning Repository: Metro Interstate Traffic Volume",
+  "dataset_url": "https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume",
+  "dataset_license": "CC BY 4.0 (as listed by UCI)",
+  "rows_after_cleaning": 48187,
+  "train_rows": 33730,
+  "validation_rows": 7228,
+  "test_rows": 7229,
+  "date_start": "2012-10-02 09:00:00",
+  "date_end": "2018-09-30 23:00:00",
+  "low_volume_threshold_inclusive": 2154.0,
+  "moderate_volume_upper_threshold_inclusive": 4555.0,
+  "features": [
+    "hour",
+    "day_of_week",
+    "month",
+    "temp",
+    "rain_1h",
+    "snow_1h",
+    "clouds_all",
+    "holiday",
+    "weather_main"
+  ],
+  "target_definition": "Derived traffic-volume classes; not independently observed congestion labels.",
+  "model": "Scikit-learn MLPClassifier; hidden layers (64, 32), ReLU, Adam, random_state=42",
+  "iterations": 99,
+  "classes": [
+    "Low Congestion",
+    "Moderate Congestion",
+    "High Congestion"
+  ],
+  "class_distribution_test": {
+    "High Congestion": 2496,
+    "Low Congestion": 2384,
+    "Moderate Congestion": 2349
+  }
+}
