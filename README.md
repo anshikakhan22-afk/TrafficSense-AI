@@ -104,6 +104,7 @@ TrafficSense-AI/
 ├── app.py                   # Interactive Streamlit Web Application
 ├── train_model.py           # Dataset loading, chronological split, ANN training & evaluation
 ├── data_preprocessing.py    # Feature engineering, imputation, and category transformation
+├── test_traffic_sense.py    # Automated unit and integration test suite (7 tests)
 ├── requirements.txt         # Compatible Python dependencies
 ├── README.md                # Comprehensive project documentation & viva guide
 ├── .gitignore               # Ignores virtual environment, cache, and local files
@@ -176,6 +177,16 @@ The training process:
 3. Fits the Scikit-Learn preprocessing pipeline (`StandardScaler` + `OneHotEncoder`).
 4. Trains the `MLPClassifier` with early stopping.
 5. Evaluates on the held-out test set and saves the model and charts.
+
+---
+
+## 8b. Running the Automated Test Suite
+
+Run the built-in test suite to verify data loading, feature engineering, leak-free thresholding, model inference, and output files:
+
+```powershell
+.\.venv\Scripts\python.exe test_traffic_sense.py
+```
 
 ---
 
